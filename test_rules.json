@@ -1,0 +1,19 @@
+{
+    "constants": {
+        "table.skip": 0,
+        "field.pk_with_prefix": 0
+    },
+    "tables": {
+        "public.table1": {
+            "field1": {
+                "type": 0,
+                "prefix": "i"
+            },
+            "field2": {
+                "type": 0,
+                "zerofill": 4
+            }
+        },
+        "public.table2": 0
+    }
+}
