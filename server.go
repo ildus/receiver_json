@@ -19,13 +19,6 @@ var (
 	logger        *golog.Logger
 )
 
-// Represents row created by decoder_json
-type Query struct {
-	Action string                 `json:"a"`
-	Data   map[string]interface{} `json:"d"`
-	Clause map[string]interface{} `json:"c"`
-}
-
 type Configuration struct {
 	PgConnectionStr string `json:"pg_connection_str"`
 	SlotName        string `json:"slot_name"`
