@@ -25,27 +25,6 @@ type Configuration struct {
 	HekaAddr        string `json:"heka_addr"`
 }
 
-type Rules struct {
-	Constants map[string]int         `json:"constants"`
-	Tables    map[string]interface{} `json:"tables"`
-}
-
-func parseRow(row string) {
-
-}
-
-func loadRules() {
-	confData, err := ioutil.ReadFile(*rulesLocation)
-	if err != nil {
-		logger.Fatal(err)
-	}
-
-	err = json.Unmarshal(confData, &rules)
-	if err != nil {
-		logger.Fatal("Rules decoding error: ", err)
-	}
-}
-
 func loadConfiguration() {
 	confData, err := ioutil.ReadFile(*confLocation)
 	if err != nil {
