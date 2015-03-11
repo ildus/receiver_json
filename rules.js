@@ -5,6 +5,7 @@ FIELD.PK_WITH_PREFIX = 0
 //table constants
 var TABLE = {};
 TABLE.SKIP = 0
+TABLE.TRUNCATE = 1
 
 var RULES = {
     "constants": {

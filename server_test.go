@@ -8,13 +8,12 @@ import (
 )
 
 func SetUp() {
-	*rulesLocation = "test_rules.json"
 	logger = golog.Default
 }
 
 func TestRulesLoading(t *testing.T) {
 	SetUp()
-	loadRules()
+	rules := loadRules("test_rules.json")
 	assert.Exactly(t, 0, rules.Constants["table.skip"])
 	assert.Exactly(t, 0, rules.Constants["field.pk_with_prefix"])
 
