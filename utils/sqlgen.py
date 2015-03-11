@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import consts as c
+from datetime import date, datetime
 
 
 def drop_table(table):
@@ -37,6 +38,8 @@ def update_str(field_name, options):
         new_val = options.get("value")
         if isinstance(new_val, basestring):
             new_val = "'%s'" % new_val
+        elif isinstance(new_val, (date, datetime)):
+            new_val = "'%s'::timestamp" % new_val.strftime("%Y-%m-%d %H:%M")
         elif new_val is None:
             new_val = 'null'
 

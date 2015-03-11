@@ -1,6 +1,7 @@
 import json
 import sys
 from utils import sqlgen, consts as c
+from datetime import date
 
 RULES = {
     "tables": {
@@ -13,6 +14,7 @@ RULES = {
             "__where": "idx != 5",
             "number": {"type": c.FIELD_USING_PK, "lpad": (6, ' '), "pk": "idx"},
             "flat": {"type": c.FIELD_REWRITE, "value": None},
+            "date_created": {"type": c.FIELD_REWRITE, "value": date(2011, 1, 1)},
         },
         "public.tmp1": c.TABLE_SKIP,
         "public.tmp2": c.TABLE_TRUNCATE,
