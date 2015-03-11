@@ -1,3 +1,4 @@
 /receiver_json
 /rules.json
 /settings.json
+*.pyc
