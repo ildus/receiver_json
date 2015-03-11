@@ -1,3 +1,3 @@
 all:
-	node rules.js > ./rules.json
+	python rules.py --json > ./rules.json
 	go build
